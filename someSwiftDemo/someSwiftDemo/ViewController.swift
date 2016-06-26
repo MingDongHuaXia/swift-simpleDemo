@@ -42,7 +42,12 @@ class ViewController: UIViewController {
             sum += i
         }
         
-        print(sum);
+        //_匹配任意类型    
+        for _ in 0...10 {
+            print("hello")
+        }
+        
+//        print(sum);
         
     }
     
