@@ -31,11 +31,21 @@ class ViewController: UIViewController {
     func demo2() {
         var sum = 0
         
+        //半开半闭区间 [0,10)
         for i in 0..<10 {
             sum += i
         }
         print(sum)
+        
+        //闭区间 [0,10]
+        for i in 0...10 {
+            sum += i
+        }
+        
+        print(sum);
+        
     }
+    
     
     func demo1() {
         //        var oName: String? = "张三"
