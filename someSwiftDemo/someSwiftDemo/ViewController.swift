@@ -21,9 +21,22 @@ class ViewController: UIViewController {
         v.backgroundColor = #colorLiteral(red: 0.4931360483, green: 0, blue: 0.1765155345, alpha: 1)
         
         view.addSubview(v);
-        demo1()
+//        demo1()
         
+       //循环
+        demo2()
     }
+    
+    
+    func demo2() {
+        var sum = 0
+        
+        for i in 0..<10 {
+            sum += i
+        }
+        print(sum)
+    }
+    
     func demo1() {
         //        var oName: String? = "张三"
         //        var oAge: Int? = 18
