@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UICollectionViewController {
     
     
     override func viewDidLoad() {
@@ -20,13 +20,34 @@ class ViewController: UIViewController {
         
         v.backgroundColor = #colorLiteral(red: 0.4931360483, green: 0, blue: 0.1765155345, alpha: 1)
         
-        view.addSubview(v);
+//        view.addSubview(v);
 //        demo1()
         
        //循环
-        demo2()
+//        demo2()
+//        demo3()
     }
     
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return 50
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+        
+        cell.backgroundColor = #colorLiteral(red: 0.8949507475, green: 0.1438436359, blue: 0.08480125666, alpha: 1)
+        collectionView.backgroundColor = #colorLiteral(red: 0.1991284192, green: 0.6028449535, blue: 0.9592232704, alpha: 1)
+        
+        
+        return cell
+        
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+    }
+   
     
     func demo2() {
         var sum = 0
@@ -42,12 +63,26 @@ class ViewController: UIViewController {
             sum += i
         }
         
-        //_匹配任意类型    
+        //_匹配任意类型
         for _ in 0...10 {
             print("hello")
         }
         
 //        print(sum);
+        
+        //遍历字符串
+        let str = "hello world"
+        
+        for c in str.characters {
+            print(c);
+        }
+        
+        let str1 = "hello world 你好世界"
+        //字符串字节数
+        print(str1.lengthOfBytes(using: .utf8))
+        //字符串字符个数
+        print(str1.characters.count)
+        
         
     }
     
